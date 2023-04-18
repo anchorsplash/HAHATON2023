@@ -21,8 +21,9 @@ public class Inventory : MonoBehaviour
     }
     public void AddItem(Items item)
     {
-        if (currentItems.Count <= inventoryCount)
+        if (currentItems.Count <= inventoryCount && item.canPickUp)
         {
+            item.pickUp = true;
             currentItems.Add(item);
             onItemAdd?.Invoke(item);
         }

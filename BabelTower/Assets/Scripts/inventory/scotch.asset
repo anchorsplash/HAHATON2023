@@ -15,3 +15,5 @@ MonoBehaviour:
   name: scotch
   icon: {fileID: 21300000, guid: 52e4847298c6da549b55429aa35a848b, type: 3}
   canUse: 0
+  canPickUp: 1
+  pickUp: 0

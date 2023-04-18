@@ -1,16 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    public Action<Items> onItemAdd;
     public Items item;
     [SerializeField] int inventoryCount = 5;
     public InventoryWindow window;
     public List<Items> currentItems = new List<Items>();
-
-    public int currentInventoryCount = 0;
-
     private void Start()
     {
         //AddItem(item);
@@ -18,20 +18,13 @@ public class Inventory : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Invoke("AddItem", 0.1f);
-
-            window.Redraw();
-        }
     }
-    void AddItem()
+    public void AddItem(Items item)
     {
-        if (currentInventoryCount <= inventoryCount)
+        if (currentItems.Count <= inventoryCount)
         {
-            Debug.Log("Вошел");
             currentItems.Add(item);
-            currentInventoryCount++;
+            onItemAdd?.Invoke(item);
         }
     }
 }

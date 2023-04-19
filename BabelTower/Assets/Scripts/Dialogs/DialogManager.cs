@@ -57,7 +57,6 @@ public class DialogManager : MonoBehaviour
     public void EndDialog()
     {
         DialogPanel.SetActive(false);
-
         GG.GetComponent<PlayerMove>().enabled = true;
     }
 }

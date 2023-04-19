@@ -10,10 +10,8 @@ public class DialogTrigger : MonoBehaviour
     public GameObject StartDialogPanel, ChangeSprite;
     public DialogManager dm;
 
-/*    public void TriggerDialog()
-    {
-        FindObjectOfType<DialogManager>().StartDialog(dialog);
-    }*/
+    bool cursorOnObject;
+
 
     public void OnTriggerEnter(Collider other)
     {
@@ -26,9 +24,18 @@ public class DialogTrigger : MonoBehaviour
         dm.EndDialog();
     }
 
+    private void OnMouseOver()
+    {
+        cursorOnObject = true;
+    }
+    private void OnMouseExit()
+    {
+        cursorOnObject = false;
+    }
+
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && cursorOnObject)
         {
             FindObjectOfType<DialogManager>().StartDialog(dialog);
             ChangeSprite.GetComponent<Image>().sprite = Img;

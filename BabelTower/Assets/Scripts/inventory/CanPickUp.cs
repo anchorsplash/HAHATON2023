@@ -7,22 +7,34 @@ public class CanPickUp : MonoBehaviour
     public Collider colliderPickUp;
     public Items item;
     public Inventory inventory;
+    public bool pickUp;
+    public bool cursorOnObject = false;
+
+    public bool inTrigger;
     private void OnTriggerEnter(Collider other)
     {
-        item.canPickUp = true;
+        inTrigger = true;
     }
     private void OnTriggerExit(Collider other)
     {
-        item.canPickUp = false;
+        inTrigger = false;
     }
     private void Update()
     {
-        if (item.pickUp)
+        if (pickUp)
         {
-            Destroy(this.gameObject);
-            item.canPickUp = false;
-            item.pickUp = false;
+            Destroy(gameObject);
+            pickUp = false;
+            inTrigger = false;
+            cursorOnObject = false;
         }
     }
-
+    private void OnMouseExit()
+    {
+        cursorOnObject = false;
+    }
+    private void OnMouseEnter()
+    {
+        cursorOnObject = true;
+    }
 }

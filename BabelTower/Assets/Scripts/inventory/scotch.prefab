@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2389842968392899330}
   - component: {fileID: 51377098289056449}
   - component: {fileID: 1486461228359271382}
-  - component: {fileID: 1477841769639173828}
   m_Layer: 0
   m_Name: scotch
   m_TagString: Untagged
@@ -114,16 +113,6 @@ MonoBehaviour:
   colliderPickUp: {fileID: 719406338380728848, guid: e643a31fb71c495489d2ba7e07dd74d6, type: 3}
   item: {fileID: 11400000, guid: 3906a2df94b43884daa7d3071d23afad, type: 2}
   inventory: {fileID: 0}
---- !u!135 &1477841769639173828
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6685730064921990885}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  pickUp: 0
+  cursorOnObject: 0
+  inTrigger: 0

@@ -7,23 +7,39 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public Action<Items> onItemAdd;
-    public Items item;
+    //public Items item;
     [SerializeField] int inventoryCount = 5;
     public InventoryWindow window;
     public List<Items> currentItems = new List<Items>();
+    public CanPickUp canPickUp;
+    SphereCollider trigger;
+
+    bool curcorOnObject;
+
     private void Start()
     {
-        //AddItem(item);
+        trigger = GetComponent<SphereCollider>();
     }
-
-    void FixedUpdate()
+    private void OnTriggerStay(Collider other)
     {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, trigger.radius);
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].GetComponent<CanPickUp>())
+            {
+                canPickUp = colliders[i].GetComponent<CanPickUp>();
+                if (canPickUp.cursorOnObject == true)
+                {
+                    curcorOnObject = true;
+                }
+            }
+        }
     }
     public void AddItem(Items item)
     {
-        if (currentItems.Count <= inventoryCount && item.canPickUp)
+        if (currentItems.Count <= inventoryCount && canPickUp.inTrigger && curcorOnObject) 
         {
-            item.pickUp = true;
+            canPickUp.pickUp = true;
             currentItems.Add(item);
             onItemAdd?.Invoke(item);
         }

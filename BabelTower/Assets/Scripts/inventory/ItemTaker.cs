@@ -6,7 +6,7 @@ public class ItemTaker : MonoBehaviour
 {
     [SerializeField] Items itemToAdd;
     [SerializeField] Inventory targetInvetory;
-
+    [SerializeField] CanPickUp pickUp;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))

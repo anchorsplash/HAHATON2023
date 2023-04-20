@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DescriptionScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class DescriptionScript : MonoBehaviour
 {
+    public GameObject manager;
     public GameObject plane;
+    public DescriptionManager descriptionManager;
 
-    public void OnPointerEnter(PointerEventData eventData)
+    private void Start()
     {
-        GameObject.Find("Description").SetActive(true);
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        GameObject.Find("Description").SetActive(false);
+        descriptionManager = manager.GetComponent<DescriptionManager>();
     }
 }

@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class ItemTaker : MonoBehaviour
 {
+    [SerializeField] List<Items> itemsToAdd;
     [SerializeField] Items itemToAdd;
     [SerializeField] Inventory targetInvetory;
-    [SerializeField] CanPickUp pickUp;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            targetInvetory.AddItem(itemToAdd);
+            if (targetInvetory.curcorOnObject)
+            {
+                targetInvetory.AddItem(targetInvetory.canPickUp.item);
+            }
         }
     }
 }

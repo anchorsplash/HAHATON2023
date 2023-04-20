@@ -14,13 +14,13 @@ public class Inventory : MonoBehaviour
     public CanPickUp canPickUp;
     SphereCollider trigger;
 
-    bool curcorOnObject;
+    public bool curcorOnObject;
 
     private void Start()
     {
         trigger = GetComponent<SphereCollider>();
     }
-    private void OnTriggerStay(Collider other)
+    private void FixedUpdate()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, trigger.radius);
         for (int i = 0; i < colliders.Length; i++)
@@ -28,15 +28,13 @@ public class Inventory : MonoBehaviour
             if (colliders[i].GetComponent<CanPickUp>())
             {
                 canPickUp = colliders[i].GetComponent<CanPickUp>();
-                if (canPickUp.cursorOnObject == true)
-                {
-                    curcorOnObject = true;
-                }
+                curcorOnObject = canPickUp.cursorOnObject;
             }
         }
     }
     public void AddItem(Items item)
     {
+        Debug.LogWarning($"{currentItems.Count <= inventoryCount}, {canPickUp.inTrigger}, {curcorOnObject}");
         if (currentItems.Count <= inventoryCount && canPickUp.inTrigger && curcorOnObject) 
         {
             canPickUp.pickUp = true;

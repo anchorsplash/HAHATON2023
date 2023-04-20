@@ -8,6 +8,7 @@ public class InventoryWindow : MonoBehaviour
     [SerializeField] Inventory targetInventory;
     [SerializeField] RectTransform itemsPanel;
 
+    [SerializeField] List<GameObject> iconsPrefabs;
     readonly List<GameObject> drawingIcons = new List<GameObject>();
     private void Start()
     {

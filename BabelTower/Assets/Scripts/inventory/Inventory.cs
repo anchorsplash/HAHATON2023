@@ -34,7 +34,6 @@ public class Inventory : MonoBehaviour
     }
     public void AddItem(Items item)
     {
-        Debug.LogWarning($"{currentItems.Count <= inventoryCount}, {canPickUp.inTrigger}, {curcorOnObject}");
         if (currentItems.Count <= inventoryCount && canPickUp.inTrigger && curcorOnObject) 
         {
             canPickUp.pickUp = true;

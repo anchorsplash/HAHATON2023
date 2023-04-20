@@ -31,12 +31,10 @@ public class CanPickUp : MonoBehaviour
     }
     private void OnMouseExit()
     {
-        Debug.Log("Курсор вышел! (CanPcikUp)");
         cursorOnObject = false;
     }
     private void OnMouseEnter()
     {
-        Debug.Log("Курсор на объекте! (CanPcikUp)");
         cursorOnObject = true;
     }
 }

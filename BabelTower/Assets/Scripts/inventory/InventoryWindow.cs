@@ -24,6 +24,7 @@ public class InventoryWindow : MonoBehaviour
             var item = targetInventory.currentItems[i];
             var icon = new GameObject(name: "Icon");
             icon.AddComponent<Image>().sprite = item.icon;
+            icon.AddComponent<DescriptionScript>();
             icon.transform.SetParent(itemsPanel.transform);
             drawingIcons.Add(icon);
         }

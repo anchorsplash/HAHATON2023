@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class DescriptionScript : MonoBehaviour
+public class DescriptionScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject plane;
-    private void OnMouseEnter()
+
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.LogError("Зашел!");
-        Instantiate(plane, Input.mousePosition, Quaternion.identity);
+        GameObject.Find("Description").SetActive(true);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        GameObject.Find("Description").SetActive(false);
     }
 }

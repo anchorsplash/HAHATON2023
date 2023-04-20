@@ -9,11 +9,20 @@ public class DescriptionScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        GameObject.Find("Description").SetActive(true);
+        GameObject descriptionObject = GameObject.FindGameObjectWithTag("Description");
+        if (descriptionObject != null)
+        {
+            descriptionObject.SetActive(true);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        GameObject.Find("Description").SetActive(false);
+        GameObject descriptionObject = GameObject.FindGameObjectWithTag("Description");
+        if (descriptionObject != null)
+        {
+            descriptionObject.SetActive(false);
+        }
     }
+
 }

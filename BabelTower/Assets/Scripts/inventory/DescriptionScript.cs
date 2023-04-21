@@ -2,15 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
-public class DescriptionScript : MonoBehaviour
+public class DescriptionScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public GameObject manager;
     public GameObject plane;
-    public DescriptionManager descriptionManager;
+    public GameObject descriptionText;
+    public Items item;
 
-    private void Start()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        descriptionManager = manager.GetComponent<DescriptionManager>();
+        descriptionText.gameObject.SetActive(true);
+        descriptionText.GetComponent<TMP_Text>().text = item.description;
+        plane.SetActive(true);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        descriptionText.gameObject.SetActive(false);
+        plane.SetActive(false);
     }
 }

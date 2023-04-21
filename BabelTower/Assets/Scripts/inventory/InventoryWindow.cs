@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventoryWindow : MonoBehaviour
 {
@@ -25,7 +26,11 @@ public class InventoryWindow : MonoBehaviour
             var icon = new GameObject(name: "Icon");
             icon.AddComponent<Image>().sprite = item.icon;
             icon.AddComponent<DescriptionScript>();
-            icon.GetComponent<DescriptionScript>().plane = icon.GetComponent<DescriptionScript>().descriptionManager.plane;
+            GameObject canvas = GameObject.Find("Canvas");
+            icon.GetComponent<DescriptionScript>().plane = canvas.transform.Find("DescriptionPanel").gameObject;
+            GameObject text = canvas.transform.Find("DescriptionText").gameObject;
+            icon.GetComponent<DescriptionScript>().descriptionText = text;
+            icon.GetComponent<DescriptionScript>().item = item;
             icon.transform.SetParent(itemsPanel.transform);
             drawingIcons.Add(icon);
         }

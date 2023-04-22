@@ -15,7 +15,6 @@ public class Inventory : MonoBehaviour
     SphereCollider trigger;
 
     public bool curcorOnObject;
-
     private void Start()
     {
         trigger = GetComponent<SphereCollider>();
@@ -36,9 +35,18 @@ public class Inventory : MonoBehaviour
     {
         if (currentItems.Count <= inventoryCount && canPickUp.inTrigger && curcorOnObject) 
         {
-            canPickUp.pickUp = true;
             currentItems.Add(item);
+            canPickUp.pickUp = true;
             onItemAdd?.Invoke(item);
+            window.Redraw();
         }
+    }
+
+    public void DelItem(int index)
+    {
+        Vector3 pos = new Vector3(transform.position.x + 2, transform.position.y + 2, transform.position.z + 2);
+        Instantiate(currentItems[index].prefab, pos, Quaternion.identity);
+        currentItems.RemoveAt(index);
+        window.Redraw();
     }
 }

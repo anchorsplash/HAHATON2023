@@ -14,7 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: scotch
   icon: {fileID: 21300000, guid: 52e4847298c6da549b55429aa35a848b, type: 3}
-  canUse: 0
-  canPickUp: 0
-  pickUp: 0
   description: Description
+  prefab: {fileID: 6685730064921990885, guid: 55980653e7282f646ba76f8aaa9fcb1d, type: 3}

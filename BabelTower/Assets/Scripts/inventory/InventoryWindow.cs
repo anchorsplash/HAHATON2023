@@ -10,38 +10,49 @@ public class InventoryWindow : MonoBehaviour
     [SerializeField] RectTransform itemsPanel;
 
     [SerializeField] List<GameObject> iconsPrefabs;
-    readonly List<GameObject> drawingIcons = new List<GameObject>();
+    public List<GameObject> drawingList = new List<GameObject>();
+
+    List<GameObject> drawingIcons = new List<GameObject>();
+
     private void Start()
     {
         Redraw();
-        targetInventory.onItemAdd += OnItemAdd;
     }
-    void OnItemAdd(Items obj) => Redraw();
-    public void Redraw()
+    public void Redraw(bool isDelited = false, int index = 0)
     {
         ClearWindow();
-        for (int i = 0; i < targetInventory.currentItems.Count; i++)
+        if (isDelited && index <= drawingList.Count)
         {
-            var item = targetInventory.currentItems[i];
-            var icon = new GameObject(name: "Icon");
-            icon.AddComponent<Image>().sprite = item.icon;
-            icon.AddComponent<DescriptionScript>();
-            GameObject canvas = GameObject.Find("Canvas");
-            icon.GetComponent<DescriptionScript>().plane = canvas.transform.Find("DescriptionPanel").gameObject;
-            GameObject text = canvas.transform.Find("DescriptionText").gameObject;
-            icon.GetComponent<DescriptionScript>().descriptionText = text;
-            icon.GetComponent<DescriptionScript>().item = item;
-            icon.transform.SetParent(itemsPanel.transform);
-            drawingIcons.Add(icon);
+            drawingIcons[index] = null;
         }
-     }
+        else
+        {
+            for (int i = 0; i < targetInventory.currentItems.Count; i++)
+            {
+                var item = targetInventory.currentItems[i];
+                var icon = new GameObject(name: "Icon");
+                icon.AddComponent<Image>().sprite = item.icon;
+
+                icon.AddComponent<DescriptionScript>();
+                GameObject canvas = GameObject.Find("Canvas");
+                icon.GetComponent<DescriptionScript>().plane = canvas.transform.Find("DescriptionPanel").gameObject;
+                GameObject text = canvas.transform.Find("DescriptionText").gameObject;
+                icon.GetComponent<DescriptionScript>().descriptionText = text;
+                icon.GetComponent<DescriptionScript>().item = item;
+
+                icon.transform.SetParent(itemsPanel.transform);
+                drawingList.Add(icon);
+                drawingIcons.Add(icon);
+            }
+        }
+    }
     void ClearWindow()
     {
-        for (int i = 0; i < drawingIcons.Count; i++)
+        for (int i = 0; i < drawingList.Count; i++)
         {
-            Destroy(drawingIcons[i]);
+            //drawingList[i] = drawingIcons[i];
+            Destroy(drawingList[i]);
         }
-        drawingIcons.Clear();
+        drawingList.Clear();
     }
-
 }

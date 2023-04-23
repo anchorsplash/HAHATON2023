@@ -22,12 +22,8 @@ public class TranslationScriptKarakal : MonoBehaviour
         }
         if (manager.isFeatherUsed)
         {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("End");
             dialog.dialog.sentences[2] = "Я очень рад, я помогу тебе";
         }
-        if (manager.isCartInBurn)
-            dialog.dialog.sentences[0] = "Интересно, что мне подарят на день рождения..";
-
-        if (manager.isGiftUsed)
-            dialog.dialog.sentences[1] = "Я очень рад, я помогу тебе";
     }
 }

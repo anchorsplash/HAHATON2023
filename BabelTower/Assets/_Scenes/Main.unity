@@ -17160,7 +17160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715483938}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7, y: 2.6, z: -26.5}
+  m_LocalPosition: {x: -1.7, y: 2.6, z: -21.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22090,7 +22090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8812355689021340325, guid: 0c289e382f5e97447b136d367d14b56d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -130.9
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 8812355689021340325, guid: 0c289e382f5e97447b136d367d14b56d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22098,7 +22098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8812355689021340325, guid: 0c289e382f5e97447b136d367d14b56d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.53
+      value: -138.13
       objectReference: {fileID: 0}
     - target: {fileID: 8812355689021340325, guid: 0c289e382f5e97447b136d367d14b56d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25358,7 +25358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984543442}
   m_LocalRotation: {x: 0.38268346, y: -0.000000029802322, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: -130.97, y: 13.55, z: -28.64}
+  m_LocalPosition: {x: -2.8700027, y: 13.55, z: -150.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38725,7 +38725,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563592442}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.83, y: 0.85, z: -127.39}
+  m_LocalPosition: {x: 0.83, y: 0.85, z: -124.71}
   m_LocalScale: {x: 10.272494, y: 2.5087988, z: 20.116022}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43476,6 +43476,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1718391455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 578189158730258215, guid: e788ea6a27503be4ea560773f1ed7484, type: 3}
+  m_PrefabInstance: {fileID: 1908289673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1718391462
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718391455}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 4.82
+  m_Center: {x: -0.0044788127, y: -1.1792065, z: 1.0730579}
 --- !u!4 &1718393601
 Transform:
   m_ObjectHideFlags: 0

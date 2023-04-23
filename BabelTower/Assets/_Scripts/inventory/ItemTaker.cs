@@ -11,6 +11,7 @@ public class ItemTaker : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+            
             if (targetInvetory.curcorOnObject)
             {
                 targetInvetory.AddItem(targetInvetory.canPickUp.item);

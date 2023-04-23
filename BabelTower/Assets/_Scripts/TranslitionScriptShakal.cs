@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TranslitionScriptShakal : MonoBehaviour
 {
     public QuestManager manager;
     public DialogTrigger dialog;
+    public Scene scene;
 
     bool b = false;
     private void Update()
@@ -18,6 +20,8 @@ public class TranslitionScriptShakal : MonoBehaviour
             dialog.dialog.sentences[0] = "Интересно, что мне подарят на день рождения..";
 
         if (manager.isGiftUsed)
+        {
             dialog.dialog.sentences[1] = "Я очень рад, я помогу тебе";
+        }
     }
 }

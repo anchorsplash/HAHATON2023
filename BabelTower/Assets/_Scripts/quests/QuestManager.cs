@@ -8,6 +8,7 @@ public class QuestManager : MonoBehaviour
 
     public bool isWellUsed = false;
     public Items handle;
+    //public 
     
     public bool isFishUsed = false;
     public Items fish;
@@ -21,6 +22,7 @@ public class QuestManager : MonoBehaviour
     public bool isCartInBurn = false;
     public Items stickOnFire;
     public GameObject firePrefab;
+    public GameObject book;
 
     public bool isStickUsed = false;
     public Items stick;
@@ -49,9 +51,9 @@ public class QuestManager : MonoBehaviour
         if (isWellUsed)
         {
             GameObject handleCopy = Instantiate(handle.prefab);
-            Vector3 vector = new Vector3(-263.66f, 1.96f, 83.13f);
+            Vector3 vector = new Vector3(-152.99f, 3.19f, -12.71f);
             handle.prefab.transform.position = vector;
-            Quaternion rotation = new Quaternion(90, 0, -90, 0);
+            Quaternion rotation = new Quaternion(0, -90, 180, 0);
             handle.prefab.transform.rotation = rotation;
             Vector3 scale = new Vector3(-12.2f, -44.28727f, -12.2f);
             handle.prefab.transform.localScale = scale;
@@ -90,6 +92,7 @@ public class QuestManager : MonoBehaviour
         {
             inventory.DelItemQuest(stickOnFire);
             firePrefab.SetActive(true);
+            book.SetActive(true);
         }
         if (isGiftUsed)
         {

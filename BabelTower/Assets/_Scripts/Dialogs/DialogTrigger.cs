@@ -10,7 +10,7 @@ public class DialogTrigger : MonoBehaviour
     public GameObject StartDialogPanel, ChangeSprite;
     public DialogManager dm;
 
-    bool cursorOnObject;
+    public bool cursorOnObject;
 
 
     public void OnTriggerEnter(Collider other)
@@ -29,11 +29,13 @@ public class DialogTrigger : MonoBehaviour
     }
     private void OnMouseEnter()
     {
-        cursorOnObject = true;
+        if (GetComponent<BoxCollider>())
+            cursorOnObject = true;
     }
     private void OnMouseExit()
     {
-        cursorOnObject = false;
+        if (GetComponent<BoxCollider>())
+            cursorOnObject = false;
     }
     public void Update()
     {

@@ -6,17 +6,27 @@ public class FeatherQuest : MonoBehaviour
 {
     public QuestManager manager;
     public Inventory inventory;
+    public bool cursorOnObject;
+    private void OnMouseEnter()
+    {
+        cursorOnObject = true;
+    }
+    private void OnMouseExit()
+    {
+        cursorOnObject = false;
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 //Debug.Log("Е нажата");
-                if (FindItem(inventory.currentItems, manager.handle) == true)
+                if (FindItem(inventory.currentItems, manager.feather) == true)
                 {
                     //Debug.Log("Я люблю пицуцу");
-                    manager.isFishUsed = true;
+                    manager.isFeatherUsed = true;
                 }
             }
         }

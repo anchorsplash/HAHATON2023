@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9900bbfc5f73a314eaf10b7321962e2e, type: 3}
   m_Name: diary
   m_EditorClassIdentifier: 
-  name: 
+  name: diary
   icon: {fileID: 0}
   description: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 4348905506054799050, guid: 2b789862c2566814294fea1903fa2ddf, type: 3}

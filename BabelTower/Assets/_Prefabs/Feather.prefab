@@ -92,6 +92,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4061428710602351242}
+  - component: {fileID: 898900924121360773}
+  - component: {fileID: -1391313075891234341}
+  - component: {fileID: -1416389487232058858}
   m_Layer: 0
   m_Name: Feather
   m_TagString: Untagged
@@ -116,6 +119,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
+--- !u!114 &898900924121360773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3681348858592819248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d2d3633ab5d07418639b19788a2177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderPickUp: {fileID: 719406338380728848, guid: e643a31fb71c495489d2ba7e07dd74d6, type: 3}
+  item: {fileID: 11400000, guid: b1b641b7f50b1c0469b9373f1b7b3fce, type: 2}
+  inventory: {fileID: 0}
+  pickUp: 0
+  cursorOnObject: 0
+  inTrigger: 0
+--- !u!54 &-1391313075891234341
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3681348858592819248}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &-1416389487232058858
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3681348858592819248}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8693050531515262582
 GameObject:
   m_ObjectHideFlags: 0

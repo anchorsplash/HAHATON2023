@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class wellQuest : MonoBehaviour
+public class DiaryQuest : MonoBehaviour
 {
     public QuestManager manager;
     public Inventory inventory;
@@ -23,10 +23,10 @@ public class wellQuest : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 //Debug.Log("Е нажата");
-                if (FindItem(inventory.currentItems, manager.handle) == true)
+                if (FindItem(inventory.currentItems, manager.diary) == true)
                 {
                     //Debug.Log("Я люблю пицуцу");
-                    manager.isWellUsed = true;
+                    manager.isDiaryUsed = true;
                 }
             }
         }

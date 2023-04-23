@@ -17,6 +17,9 @@ public class QuestManager : MonoBehaviour
     public bool isFeatherUsed = false;
     public Items feather;
 
+    public bool isDiaryUsed = false;
+    public Items diary;
+
     public bool step1 = false;
     public bool step2 = false;
     public bool step3 = false;
@@ -29,7 +32,7 @@ public class QuestManager : MonoBehaviour
     {
         if (isWellUsed)
         {
-            Instantiate(handle.prefab);
+            GameObject handleCopy = Instantiate(handle.prefab);
             Vector3 vector = new Vector3(-263.66f, 1.96f, 83.13f);
             handle.prefab.transform.position = vector;
             Quaternion rotation = new Quaternion(90, 0, -90, 0);
@@ -37,7 +40,7 @@ public class QuestManager : MonoBehaviour
             Vector3 scale = new Vector3(-12.2f, -44.28727f, -12.2f);
             handle.prefab.transform.localScale = scale;
 
-            handle.prefab.GetComponent<Rigidbody>().isKinematic = true;
+            handleCopy.GetComponent<Rigidbody>().isKinematic = true;
 
             inventory.DelItemQuest(handle);
             Debug.Log("Ëîë");
@@ -53,6 +56,11 @@ public class QuestManager : MonoBehaviour
         {
             inventory.DelItemQuest(feather);
             step3 = true;
+        }
+        if (isDiaryUsed)
+        {
+            inventory.DelItemQuest(diary);
+            
         }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemTaker : MonoBehaviour
 {
-    [SerializeField] List<Items> itemsToAdd;
+    //[SerializeField] List<Items> itemsToAdd;
     [SerializeField] Items itemToAdd;
     [SerializeField] Inventory targetInvetory;
     private void Update()

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9900bbfc5f73a314eaf10b7321962e2e, type: 3}
   m_Name: feather
   m_EditorClassIdentifier: 
-  name: 
-  icon: {fileID: 0}
-  description: 
-  prefab: {fileID: 0}
+  name: FEATHER
+  icon: {fileID: 21300000, guid: 531a304008c0e4d4e800646e1f294563, type: 3}
+  description: "\u041F\u0415\u0420\u0412\u041E"
+  prefab: {fileID: 3681348858592819248, guid: 2e9f54445a26fa244a889480b0c98ea7, type: 3}

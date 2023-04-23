@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: handle
   m_EditorClassIdentifier: 
   name: handle
-  icon: {fileID: 21300000, guid: ddf2e76e8a1f88f46ae1e42277850b48, type: 3}
+  icon: {fileID: 21300000, guid: f2b1aa3b6cf82384096b2196b5f2e95b, type: 3}
   description: "\u042D\u0422\u041E \u0420\u0423\u0427\u041A\u0410 \u041E\u0422 \u041A\u041E\u041B\u041E\u0414\u0426\u0410"
   prefab: {fileID: 3622272240211069361, guid: cb5f110b82086964cb2904b0feabda36, type: 3}

@@ -63,9 +63,9 @@ MonoBehaviour:
   isBreadUsed: 0
   bread: {fileID: 11400000, guid: 129cdf17b7e39724791a0c3ffd1c6b53, type: 2}
   kroshka: {fileID: 0}
-  isTAxeUsed: 0
-  axe: {fileID: 0}
-  tree: {fileID: 0}
+  isAxeUsed: 0
+  axe: {fileID: 11400000, guid: 0b6e9a4934a26154c97563e818725a71, type: 2}
+  brokenTree: {fileID: 4788605177020256266, guid: 9a82df56f9363054db24c7240e212ae3, type: 3}
   step1: 0
   step2: 0
   step3: 0

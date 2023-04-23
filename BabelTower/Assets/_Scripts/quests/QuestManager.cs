@@ -103,8 +103,6 @@ public class QuestManager : MonoBehaviour
         }
         if (isAxeUsed)
         {
-            GameObject tree = Instantiate(brokenTree, transform);
-            tree.GetComponent<TreeQuest>().inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         }
     }
 }

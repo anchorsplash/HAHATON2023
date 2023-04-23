@@ -15,4 +15,4 @@ MonoBehaviour:
   name: diary
   icon: {fileID: 0}
   description: 
-  prefab: {fileID: 4348905506054799050, guid: 2b789862c2566814294fea1903fa2ddf, type: 3}
+  prefab: {fileID: 8169520561329651933, guid: 2569a62b0421feb4fbb320665445719f, type: 3}

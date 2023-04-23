@@ -8,6 +8,12 @@ public class TreeQuest : MonoBehaviour
     public Inventory inventory;
     public bool cursorOnObject;
     public GameObject brokenTree;
+
+    Transform position;
+    private void Start()
+    {
+        position = gameObject.GetComponent<Transform>();
+    }
     private void OnMouseEnter()
     {
         cursorOnObject = true;
@@ -23,9 +29,10 @@ public class TreeQuest : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                //Debug.Log("Е нажата");
                 if (FindItem(inventory.currentItems, manager.axe))
                 {
+                    GameObject tree = Instantiate(brokenTree, position);
+                    tree.GetComponent<TreeQuest>().inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
                     manager.isAxeUsed = true;
                     Destroy(gameObject);
                 }

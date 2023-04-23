@@ -500,6 +500,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2694086063644010321}
   - component: {fileID: 8323634889096772907}
+  - component: {fileID: -7881927341985208031}
+  - component: {fileID: -7477596811801982584}
+  - component: {fileID: -7482359737384448005}
+  - component: {fileID: -3378984090078757444}
   m_Layer: 0
   m_Name: Jackal_1
   m_TagString: Untagged
@@ -544,6 +548,70 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!135 &-7881927341985208031
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3326050904228281835}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.0706359
+  m_Center: {x: 0.043424215, y: 0.000000011175871, z: 0.020249462}
+--- !u!65 &-7477596811801982584
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3326050904228281835}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19087593, y: 0.15324311, z: 0.03156253}
+  m_Center: {x: 0.04843812, y: 0.00000001213944, z: 0.020249743}
+--- !u!114 &-7482359737384448005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3326050904228281835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561beb9e341abcb438d3b0afa44cb751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Img: {fileID: 21300000, guid: 52e4847298c6da549b55429aa35a848b, type: 3}
+  dialog:
+    name: "\u042F \u0412\u041E\u041B\u041A \u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420"
+    sentences:
+    - "\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420"
+    - "\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420"
+    - "\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420"
+  StartDialogPanel: {fileID: 0}
+  awatar: {fileID: 0}
+  dm: {fileID: 0}
+  cursorOnObject: 0
+--- !u!114 &-3378984090078757444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3326050904228281835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a3376d9802a3f4abb34aceea06eec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  inventory: {fileID: 0}
+  cursorOnObject: 0
 --- !u!1 &3493835888597333847
 GameObject:
   m_ObjectHideFlags: 0

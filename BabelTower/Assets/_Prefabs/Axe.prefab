@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578189158730258215}
-  m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -261.74115, y: 2.8456287, z: 78.963356}
   m_LocalScale: {x: 0.16, y: 0.18931478, z: 0.16}
   m_ConstrainProportionsScale: 1
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderPickUp: {fileID: 719406338380728848, guid: e643a31fb71c495489d2ba7e07dd74d6, type: 3}
   item: {fileID: 11400000, guid: 0b6e9a4934a26154c97563e818725a71, type: 2}
-  inventory: {fileID: 8812355689021340330, guid: 0c289e382f5e97447b136d367d14b56d, type: 3}
+  inventory: {fileID: 0}
   pickUp: 0
   cursorOnObject: 0
   inTrigger: 0

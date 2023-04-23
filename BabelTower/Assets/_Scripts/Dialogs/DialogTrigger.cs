@@ -7,7 +7,7 @@ public class DialogTrigger : MonoBehaviour
 {
     public Sprite Img;
     public Dialog dialog;
-    public GameObject StartDialogPanel, ChangeSprite;
+    public GameObject StartDialogPanel, awatar;
     public DialogManager dm;
 
     public bool cursorOnObject;
@@ -42,7 +42,7 @@ public class DialogTrigger : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && cursorOnObject)
         {
             FindObjectOfType<DialogManager>().StartDialog(dialog);
-            ChangeSprite.GetComponent<Image>().sprite = Img;
+            awatar.GetComponent<Image>().sprite = Img;
         }
     }
 }

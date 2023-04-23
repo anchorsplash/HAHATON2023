@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public LayerMask whatCanBeClickedOn;
-    Camera cam;
+    public Camera cam;
+    
     
     RaycastHit hit;
     Ray ray;

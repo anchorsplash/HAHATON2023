@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3172084292278109782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3172084292278109783}
+  - component: {fileID: 3172084292278109780}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3172084292278109783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3172084292278109782}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -265.2687, y: 1.6148827, z: 83.20734}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3172084292278109780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3172084292278109782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 528eb2bf260dee64486e3968889b0e35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
+  isWellUsed: 0
+  handle: {fileID: 11400000, guid: 46952bdb6dde5094692826749faff13b, type: 2}
+  isFishUsed: 0
+  fish: {fileID: 11400000, guid: 08ddaaf1f0885404ca5f3054e4e37524, type: 2}
+  isFeatherUsed: 0
+  feather: {fileID: 11400000, guid: b1b641b7f50b1c0469b9373f1b7b3fce, type: 2}
+  isDiaryUsed: 0
+  diary: {fileID: 11400000, guid: 936b8d55dc5591044bc8d939d80441df, type: 2}
+  isCartInBurn: 0
+  stickOnFire: {fileID: 11400000, guid: e40c5fe626280e54d8d932b1d6f554ce, type: 2}
+  firePrefab: {fileID: 0}
+  isStickUsed: 0
+  stick: {fileID: 11400000, guid: b7bc5e354992f8340930ad1b693e2df2, type: 2}
+  isGiftUsed: 0
+  gift: {fileID: 11400000, guid: b7bc5e354992f8340930ad1b693e2df2, type: 2}
+  isBreadUsed: 0
+  bread: {fileID: 11400000, guid: 129cdf17b7e39724791a0c3ffd1c6b53, type: 2}
+  kroshka: {fileID: 0}
+  isTAxeUsed: 0
+  axe: {fileID: 0}
+  tree: {fileID: 0}
+  step1: 0
+  step2: 0
+  step3: 0

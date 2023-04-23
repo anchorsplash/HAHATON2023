@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: fireStick
   m_EditorClassIdentifier: 
   name: 
-  icon: {fileID: 0}
-  description: 
+  icon: {fileID: 21300000, guid: ce08d62c32aa26047b31854ca62adaf0, type: 3}
+  description: "\u0412 \u043E\u0442\u043B\u0438\u0447\u0438\u0435 \u043E\u0442 \u0438\u0433\u043B\u044B
+    \u0442\u043E\u0447\u043D\u043E \u043D\u0435 \u043F\u043E\u0442\u0435\u0440\u044F\u0435\u0448\u044C
+    \u0432 \u0441\u0442\u043E\u0433\u0435 \u0441\u0435\u043D\u0430"
   prefab: {fileID: 0}

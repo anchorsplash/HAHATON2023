@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: axe
   icon: {fileID: 21300000, guid: 99c1b770a89cf1e438ecd61609b5c36c, type: 3}
-  description: "\u0410\u0425\u0410\u0425\u0410\u0425\u0410\u0425 \u0422\u041E\u041F\u041E\u0420"
+  description: 'AXE ATTACKS! '
   prefab: {fileID: 578189158730258215, guid: e788ea6a27503be4ea560773f1ed7484, type: 3}

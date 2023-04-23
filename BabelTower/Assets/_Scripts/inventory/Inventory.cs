@@ -31,14 +31,14 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-    public void AddItem(Items item)
+    public void AddItem(Items item, bool isQuestItem = false)
     {
         if (item.name == "diary")
         {
             canPickUp.pickUp = true;
             return;
         }
-        if (currentItems.Count <= inventoryCount && canPickUp.inTrigger && curcorOnObject) 
+        if ((currentItems.Count <= inventoryCount && canPickUp.inTrigger && curcorOnObject) || isQuestItem) 
         {
             currentItems.Add(item);
             canPickUp.pickUp = true;

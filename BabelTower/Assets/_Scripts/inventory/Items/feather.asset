@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: FEATHER
   icon: {fileID: 21300000, guid: 531a304008c0e4d4e800646e1f294563, type: 3}
-  description: "\u041F\u0415\u0420\u0412\u041E"
+  description: "\u041F\u043E\u0434 \u0440\u0435\u0431\u0440\u043E..."
   prefab: {fileID: 3681348858592819248, guid: 2e9f54445a26fa244a889480b0c98ea7, type: 3}

@@ -5,8 +5,6 @@ using UnityEngine;
 public class QuestManager : MonoBehaviour
 {
     public Inventory inventory;
-    public wellQuest wellQuest;
-    public FishQuest fishQuest;
 
     public bool isWellUsed = false;
     public Items handle;
@@ -19,6 +17,24 @@ public class QuestManager : MonoBehaviour
 
     public bool isDiaryUsed = false;
     public Items diary;
+
+    public bool isCartInBurn = false;
+    public Items stickOnFire;
+    public GameObject firePrefab;
+
+    public bool isStickUsed = false;
+    public Items stick;
+
+    public bool isGiftUsed = false;
+    public Items gift;
+
+    public bool isBreadUsed = false;
+    public Items bread;
+    public GameObject kroshka;
+
+    public bool isAxeUsed = false;
+    public Items axe;
+    public GameObject brokenTree;
 
     public bool step1 = false;
     public bool step2 = false;
@@ -58,9 +74,37 @@ public class QuestManager : MonoBehaviour
             step3 = true;
         }
         if (isDiaryUsed)
+
         {
             inventory.DelItemQuest(diary);
-            
+        }
+
+        if (isStickUsed)
+        {
+            inventory.DelItemQuest(stick);
+            inventory.AddItem(stickOnFire, true);
+            isStickUsed = false;
+        }
+
+        if (isCartInBurn)
+        {
+            inventory.DelItemQuest(stickOnFire);
+            firePrefab.SetActive(true);
+        }
+        if (isGiftUsed)
+        {
+            inventory.DelItemQuest(gift);
+
+        }
+        if (isBreadUsed)
+        {
+            inventory.DelItemQuest(bread);
+            kroshka.SetActive(true);
+        }
+        if (isAxeUsed)
+        {
+            GameObject tree = Instantiate(brokenTree, transform);
+            tree.GetComponent<TreeQuest>().inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         }
     }
 }

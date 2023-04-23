@@ -4,9 +4,9 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - manager: {fileID: 3977962665537185269, guid: 66cc5a2a78d9e0c41882012e1eec93ac, type: 3}
   - plane: {fileID: 4397897289407654822, guid: 076e7f48d187f5f47a6e345dedeba9b2, type: 3}
-  - descriptionManager: {instanceID: 0}
+  - descriptionText: {fileID: 3070889030890492282, guid: b97a5a1c691ddd643b919ecd757836a6, type: 3}
+  - item: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6963682265817921243}
   - component: {fileID: 5859126346626266272}
   - component: {fileID: 8635651606015769134}
+  - component: {fileID: 8295985388616386435}
   m_Layer: 0
   m_Name: Stick4
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2428484880458778000}
   m_LocalRotation: {x: 0.10690265, y: 0.10690265, z: -0.69897914, w: 0.69897914}
   m_LocalPosition: {x: -261.5935, y: 0.32054985, z: 82.387314}
-  m_LocalScale: {x: 0.1, y: 0.13645755, z: 0.1}
+  m_LocalScale: {x: 0.15, y: 0.20468631, z: 0.15}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -133,3 +134,16 @@ MonoBehaviour:
   pickUp: 0
   cursorOnObject: 0
   inTrigger: 0
+--- !u!135 &8295985388616386435
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2428484880458778000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 12.37
+  m_Center: {x: 0.31495926, y: 0.06985473, z: 0.1814804}

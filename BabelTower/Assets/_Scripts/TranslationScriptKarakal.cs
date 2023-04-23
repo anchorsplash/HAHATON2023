@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TranslationScript : MonoBehaviour
+public class TranslationScriptKarakal : MonoBehaviour
 {
     public QuestManager manager;
     public DialogTrigger dialog;
 
+    bool b = false;
     private void Update()
     {
-        if (manager.isWellUsed)
+        if (manager.isWellUsedCopy && b)
         {
-            Debug.Log("LLLL");
             dialog.dialog.sentences[0] = "Здравствуй, плохие украсть жаренная вкусная рыба, это точно шакал";
+            b = true;
         }
             
         if (manager.isFishUsed)

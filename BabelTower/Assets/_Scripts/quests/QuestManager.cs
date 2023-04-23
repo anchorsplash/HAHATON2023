@@ -7,6 +7,7 @@ public class QuestManager : MonoBehaviour
     public Inventory inventory;
 
     public bool isWellUsed = false;
+    public bool isWellUsedCopy = true;
     public Items handle;
     //public 
     
@@ -63,6 +64,8 @@ public class QuestManager : MonoBehaviour
             inventory.DelItemQuest(handle);
             Debug.Log("Ћол");
             step1 = true;
+            book.SetActive(true);
+            isWellUsedCopy = true;
             isWellUsed = false;
         }
         if (isFishUsed)

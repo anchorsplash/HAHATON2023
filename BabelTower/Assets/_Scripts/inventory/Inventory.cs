@@ -27,7 +27,7 @@ public class Inventory : MonoBehaviour
             if (colliders[i].GetComponent<CanPickUp>())
             {
                 canPickUp = colliders[i].GetComponent<CanPickUp>();
-                curcorOnObject = canPickUp.cursorOnObject;
+                //curcorOnObject = canPickUp.cursorOnObject;
             }
         }
     }
@@ -38,7 +38,7 @@ public class Inventory : MonoBehaviour
             canPickUp.pickUp = true;
             return;
         }
-        if ((currentItems.Count <= inventoryCount && canPickUp.inTrigger && curcorOnObject) || isQuestItem) 
+        if ((currentItems.Count <= inventoryCount && canPickUp.inTrigger) || isQuestItem) //&& curcorOnObject
         {
             currentItems.Add(item);
             canPickUp.pickUp = true;

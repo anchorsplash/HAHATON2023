@@ -5,6 +5,7 @@ using UnityEngine;
 public class TreeQuest : MonoBehaviour
 {
     public QuestManager manager;
+    public Animator animator;
     public Inventory inventory;
     public bool cursorOnObject;
     public GameObject brokenTree;
@@ -31,10 +32,11 @@ public class TreeQuest : MonoBehaviour
             {
                 if (FindItem(inventory.currentItems, manager.axe))
                 {
-                    GameObject tree = Instantiate(brokenTree, position);
-                    tree.GetComponent<TreeQuest>().inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+                    //GameObject tree = Instantiate(brokenTree, position);
+                    //tree.GetComponent<TreeQuest>().inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
                     manager.isAxeUsed = true;
-                    Destroy(gameObject);
+                    animator.SetBool("Falling", true);
+                    //Destroy(gameObject);
                 }
             }
         }

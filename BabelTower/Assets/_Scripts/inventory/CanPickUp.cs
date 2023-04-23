@@ -8,7 +8,7 @@ public class CanPickUp : MonoBehaviour
     public Items item;
     public Inventory inventory;
     public bool pickUp;
-    public bool cursorOnObject = false;
+    //public bool cursorOnObject = false;
 
     public bool inTrigger;
     private void OnTriggerEnter(Collider other)
@@ -26,15 +26,15 @@ public class CanPickUp : MonoBehaviour
             Destroy(gameObject);
             pickUp = false;
             inTrigger = false;
-            cursorOnObject = false;
+            //cursorOnObject = false;
         }
     }
-    private void OnMouseExit()
-    {
-        cursorOnObject = false;
-    }
-    private void OnMouseEnter()
-    {
-        cursorOnObject = true;
-    }
+    //private void OnMouseExit()
+    //{
+    //    cursorOnObject = false;
+    //}
+    //private void OnMouseEnter()
+    //{
+    //    cursorOnObject = true;
+    //}
 }

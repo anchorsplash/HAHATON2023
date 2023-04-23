@@ -12,11 +12,12 @@ public class PlayerMove : MonoBehaviour
     Vector3 newDirection;
     private Animator anim;
 
-    
+
     void Start()
     {
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         anim = GetComponent<Animator>();
+        playeraudio = GetComponent<AudioSource>();
     }
 
 
@@ -44,6 +45,16 @@ public class PlayerMove : MonoBehaviour
 
         }   
     
+    }
+
+    public AudioClip[] footsteps;
+    AudioSource playeraudio;
+
+    void Footstep()
+    {
+        int randInd = Random.Range(0, footsteps.Length);
+
+        playeraudio.PlayOneShot(footsteps[randInd]);
     }
 
 }

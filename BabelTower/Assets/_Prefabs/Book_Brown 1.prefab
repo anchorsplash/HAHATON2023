@@ -161,5 +161,4 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 936b8d55dc5591044bc8d939d80441df, type: 2}
   inventory: {fileID: 0}
   pickUp: 0
-  cursorOnObject: 0
   inTrigger: 0

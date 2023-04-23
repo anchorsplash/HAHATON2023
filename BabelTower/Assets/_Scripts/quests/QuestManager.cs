@@ -24,6 +24,8 @@ public class QuestManager : MonoBehaviour
     public Items stickOnFire;
     public GameObject firePrefab;
     public GameObject book;
+    public GameObject shacals;
+    public Transform shacalsPositions;
 
     public bool isStickUsed = false;
     public Items stick;
@@ -96,6 +98,7 @@ public class QuestManager : MonoBehaviour
             inventory.DelItemQuest(stickOnFire);
             firePrefab.SetActive(true);
             book.SetActive(true);
+            shacals.transform.position = shacalsPositions.position;
         }
         if (isGiftUsed)
         {

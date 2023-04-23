@@ -10,13 +10,18 @@ public class DialogTrigger : MonoBehaviour
     public GameObject StartDialogPanel, awatar;
     public DialogManager dm;
 
+    bool inTrigger;
     public bool cursorOnObject;
 
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
+        {
             StartDialogPanel.SetActive(true);
+            inTrigger = true;
+        }
+            
     }
 
     public void OnTriggerExit(Collider other)
@@ -25,21 +30,22 @@ public class DialogTrigger : MonoBehaviour
         {
             StartDialogPanel.SetActive(false);
             dm.EndDialog();
+            inTrigger = false;
         }
     }
-    private void OnMouseEnter()
-    {
-        if (GetComponent<BoxCollider>())
-            cursorOnObject = true;
-    }
-    private void OnMouseExit()
-    {
-        if (GetComponent<BoxCollider>())
-            cursorOnObject = false;
-    }
+    //private void OnMouseEnter()
+    //{
+    //    if (GetComponent<BoxCollider>())
+    //        cursorOnObject = true;
+    //}
+    //private void OnMouseExit()
+    //{
+    //    if (GetComponent<BoxCollider>())
+    //        cursorOnObject = false;
+    //}
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && cursorOnObject)
+        if (Input.GetKeyDown(KeyCode.F) && inTrigger) //&& cursorOnObject
         {
             FindObjectOfType<DialogManager>().StartDialog(dialog);
             awatar.GetComponent<Image>().sprite = Img;

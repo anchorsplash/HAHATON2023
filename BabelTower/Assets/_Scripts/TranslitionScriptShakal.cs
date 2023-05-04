@@ -1,27 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class TranslitionScriptShakal : MonoBehaviour
 {
     public QuestManager manager;
+    public Inventory inventori;
     public DialogTrigger dialog;
-    public Scene scene;
 
-    bool b = false;
     private void Update()
     {
-        if (manager.isFeatherUsed)
-        {
-            dialog.dialog.sentences[2] = "я очень рад, € помогу тебе";
-        }
-        if (manager.isCartInBurn)
-            dialog.dialog.sentences[0] = "»нтересно, что мне подар€т на день рождени€..";
-
-        if (manager.isGiftUsed)
-        {
-            dialog.dialog.sentences[1] = "я очень рад, € помогу тебе";
-        }
+        //if (manager.bookshacal1 && manager.isGiftUsed == false)
+        //{
+        //    //dialog.dialog.sent[0] = "” мен€ сегодн€ день рождени€! »нтересно, что мне подар€т..";
+        //}
+        //else if (inventori.manager && manager.isGiftUsed)
+        //    //dialog.dialog.sent[0] = "—пасибо! Ёто то, что € хотел!";
+        //if (inventori.bookshacal2)
+        //{
+        //    //dialog.dialog.sent[1] = "я помогу тебе!";
+        //}
     }
 }

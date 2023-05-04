@@ -13,8 +13,13 @@ public class Inventory : MonoBehaviour
     public List<Items> currentItems = new List<Items>();
     public CanPickUp canPickUp;
     SphereCollider trigger;
-    
+    public QuestManager manager;
+
     public bool curcorOnObject;
+
+    public bool bookCaracal1 = false;
+    public bool bookshacal1 = false;
+    public bool bookshacal2 = false;
     private void Start()
     {
         trigger = GetComponent<SphereCollider>();
@@ -36,6 +41,25 @@ public class Inventory : MonoBehaviour
         if (item.name == "diary")
         {
             canPickUp.pickUp = true;
+            if (canPickUp.gameObject.name == "bookCaracal1")
+            {
+                bookCaracal1 = true;
+                manager.Plashka("Теперь вы понимаете ящерецу чуть лучше!");
+            }
+                
+            else if (canPickUp.gameObject.name == "bookshacal1")
+            {
+                bookshacal1 = true;
+                manager.TreasureQuestDone();
+                manager.Plashka("Теперь вы понимаете шакала чуть лучше!");
+            }
+            else if (canPickUp.gameObject.name == "bookshacal2")
+            {
+                bookshacal2 = true;
+                manager.CartQuestDone();
+                manager.Plashka("Теперь вы понимаете шакала чуть лучше!");
+            }
+                
             return;
         }
         if ((currentItems.Count <= inventoryCount && canPickUp.inTrigger) || isQuestItem) //&& curcorOnObject

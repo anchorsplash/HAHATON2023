@@ -26,7 +26,7 @@ public class FireStickQuest : MonoBehaviour
                 if (FindItem(inventory.currentItems, manager.stick) == true)
                 {
                     //Debug.Log("Я люблю пицуцу");
-                    manager.isStickUsed = true;
+                    manager.StickQuestDone();
                 }
             }
         }
@@ -40,14 +40,5 @@ public class FireStickQuest : MonoBehaviour
                 return true;
         }
         return false;
-    }
-    public int FindItemInt(List<Items> list, Items item)
-    {
-        for (int i = 0; i < list.Count; i++)
-        {
-            if (list[i] == item)
-                return i;
-        }
-        return 0;
     }
 }

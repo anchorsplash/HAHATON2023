@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DialogTrigger : MonoBehaviour
 {
     public Sprite Img;
+
     public Dialog dialog;
     public GameObject StartDialogPanel, awatar;
     public DialogManager dm;
@@ -47,8 +48,10 @@ public class DialogTrigger : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && inTrigger) //&& cursorOnObject
         {
+            dialog.awatarSpeaker = Img;
             FindObjectOfType<DialogManager>().StartDialog(dialog);
             awatar.GetComponent<Image>().sprite = Img;
+
         }
     }
 }

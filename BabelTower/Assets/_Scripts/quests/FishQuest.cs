@@ -22,11 +22,9 @@ public class FishQuest : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                //Debug.Log("Е нажата");
                 if (FindItem(inventory.currentItems, manager.fish) == true)
                 {
-                    //Debug.Log("Я люблю пицуцу");
-                    manager.isFishUsed = true;
+                    manager.FishQuestDone();
                 }
             }
         }
@@ -40,14 +38,5 @@ public class FishQuest : MonoBehaviour
                 return true;
         }
         return false;
-    }
-    public int FindItemInt(List<Items> list, Items item)
-    {
-        for (int i = 0; i < list.Count; i++)
-        {
-            if (list[i] == item)
-                return i;
-        }
-        return 0;
     }
 }

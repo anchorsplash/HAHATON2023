@@ -26,7 +26,7 @@ public class CartQuest : MonoBehaviour
                 if (FindItem(inventory.currentItems, manager.stickOnFire) == true)
                 {
                     //Debug.Log("Я люблю пицуцу");
-                    manager.isCartInBurn = true;
+                    manager.CartQuestDone();
                 }
             }
         }
@@ -40,14 +40,5 @@ public class CartQuest : MonoBehaviour
                 return true;
         }
         return false;
-    }
-    public int FindItemInt(List<Items> list, Items item)
-    {
-        for (int i = 0; i < list.Count; i++)
-        {
-            if (list[i] == item)
-                return i;
-        }
-        return 0;
     }
 }

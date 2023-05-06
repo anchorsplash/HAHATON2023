@@ -20,12 +20,21 @@ public class Inventory : MonoBehaviour
     public bool bookCaracal1 = false;
     public bool bookshacal1 = false;
     public bool bookshacal2 = false;
+
+    public LayerMask ItemTag; //РЎР»РѕР№ РґР»СЏ РїСЂРµРґРјРµС‚Р°
+    private Ray _ray; // Р›СѓС‡
+    private RaycastHit _hit; // РњРµСЃС‚Рѕ СЃС‚РѕР»РєРЅРѕРІРµРЅРёСЏ Р»СѓС‡Р°
+    [SerializeField] private Camera _fpcCamera; // РљР°РјРµСЂР°
+    [SerializeField] private float _maxDistanceRay; // РњР°РєСЃ.РґР°Р»СЊРЅРѕСЃС‚СЊ Р»СѓС‡Р°
+
+
     private void Start()
     {
         trigger = GetComponent<SphereCollider>();
     }
     private void FixedUpdate()
     {
+        Ray(); // РђРєС‚РёРІР°С†РёСЏ Р»СѓС‡Р°
         Collider[] colliders = Physics.OverlapSphere(transform.position, trigger.radius);
         for (int i = 0; i < colliders.Length; i++)
         {
@@ -36,6 +45,12 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+
+    private void Ray() // С„СѓРЅРєС†РёСЏ Р»СѓС‡Р°
+    {
+        _ray = _fpcCamera.ScreenPointToRay(Input.mousePosition);
+    }
+
     public void AddItem(Items item, bool isQuestItem = false)
     {
         if (item.name == "diary")
@@ -44,31 +59,38 @@ public class Inventory : MonoBehaviour
             if (canPickUp.gameObject.name == "bookCaracal1")
             {
                 bookCaracal1 = true;
-                manager.Plashka("Теперь вы понимаете ящерецу чуть лучше!");
+                manager.Plashka("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ!");
             }
                 
             else if (canPickUp.gameObject.name == "bookshacal1")
             {
                 bookshacal1 = true;
                 manager.TreasureQuestDone();
-                manager.Plashka("Теперь вы понимаете шакала чуть лучше!");
+                manager.Plashka("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ!");
             }
             else if (canPickUp.gameObject.name == "bookshacal2")
             {
                 bookshacal2 = true;
                 manager.CartQuestDone();
-                manager.Plashka("Теперь вы понимаете шакала чуть лучше!");
+                manager.Plashka("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ!");
             }
                 
             return;
         }
-        if ((currentItems.Count <= inventoryCount && canPickUp.inTrigger) || isQuestItem) //&& curcorOnObject
+
+
+
+        if(Physics.Raycast(_ray, out _hit,_maxDistanceRay, ItemTag)) //Р•СЃР»Рё Р»СѓС‡ СЃС‚РѕР»РєРЅСѓР»СЃСЏ СЃ РєРѕР»Р»Р°Р№РґРµСЂРѕРј СЃРѕ СЃР»РѕРµРј ItemTag :
         {
-            currentItems.Add(item);
-            canPickUp.pickUp = true;
-            onItemAdd?.Invoke(item);
-            window.Redraw();
+            if ((currentItems.Count <= inventoryCount && canPickUp.inTrigger ) || isQuestItem) //&& curcorOnObject
+            {
+                currentItems.Add(item);
+                canPickUp.pickUp = true;
+                onItemAdd?.Invoke(item);
+                window.Redraw();
+            }
         }
+
     }
 
     public void DelItem(int index)

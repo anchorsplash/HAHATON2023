@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6001589719849338170}
   - component: {fileID: 5089742431841445655}
   - component: {fileID: 25344282572881542}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2684416133079684947}
   - component: {fileID: 2964973835804633098}
   - component: {fileID: 7227903539670349614}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 3918595464554188358}
   - component: {fileID: 5973443179873340550}
   - component: {fileID: 703564183621022765}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 5037909071268252475}
   - component: {fileID: 1466163256928788588}
   - component: {fileID: 569531130709868652}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 4024205058963850918}
   - component: {fileID: 2421249087511962834}
   - component: {fileID: 581517537476897352}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 1420560066665447244}
   - component: {fileID: 4649869065352289300}
   - component: {fileID: 5464921367545787618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +510,8 @@ GameObject:
   - component: {fileID: 8070259662793410168}
   - component: {fileID: 5397372911364293329}
   - component: {fileID: 1957660252}
-  m_Layer: 0
+  - component: {fileID: 8165690390772781181}
+  m_Layer: 6
   m_Name: well
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,6 +582,24 @@ CapsuleCollider:
   m_Height: 3.95
   m_Direction: 1
   m_Center: {x: 0.3, y: -0.44, z: 0}
+--- !u!114 &8165690390772781181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8070259662793410169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.79322517, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &9157016115253260374
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,7 +611,7 @@ GameObject:
   - component: {fileID: 9157016115253260369}
   - component: {fileID: 9157016115253260371}
   - component: {fileID: 9157016115253260368}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

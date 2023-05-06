@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 6997434158109664219}
   - component: {fileID: 6069977867568024278}
   - component: {fileID: 6064091070273588562}
-  m_Layer: 0
+  - component: {fileID: -8487179599585566732}
+  m_Layer: 6
   m_Name: Bread
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +103,6 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 129cdf17b7e39724791a0c3ffd1c6b53, type: 2}
   inventory: {fileID: 0}
   pickUp: 0
-  cursorOnObject: 0
   inTrigger: 0
 --- !u!54 &6069977867568024278
 Rigidbody:
@@ -133,3 +133,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0736244, y: 1.5222104, z: 3.8424408}
   m_Center: {x: 0, y: -0.18042907, z: -0.0010335445}
+--- !u!114 &-8487179599585566732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601725738349601074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.79322517, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

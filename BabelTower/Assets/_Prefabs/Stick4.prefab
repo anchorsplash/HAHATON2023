@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 5859126346626266272}
   - component: {fileID: 8635651606015769134}
   - component: {fileID: 8295985388616386435}
-  m_Layer: 0
+  - component: {fileID: 627779103384350425}
+  m_Layer: 6
   m_Name: Stick4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +133,6 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: b7bc5e354992f8340930ad1b693e2df2, type: 2}
   inventory: {fileID: 8812355689021340330, guid: 0c289e382f5e97447b136d367d14b56d, type: 3}
   pickUp: 0
-  cursorOnObject: 0
   inTrigger: 0
 --- !u!135 &8295985388616386435
 SphereCollider:
@@ -147,3 +147,21 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 12.37
   m_Center: {x: 0.31495926, y: 0.06985473, z: 0.1814804}
+--- !u!114 &627779103384350425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2428484880458778000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.79322517, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
